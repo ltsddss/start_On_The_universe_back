@@ -4,18 +4,15 @@ import com.lts.start.entity.UmsEntity;
 import com.lts.start.service.UmsService;
 import com.lts.start.utils.JWTUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@Component
 public class LoginInterceptor implements HandlerInterceptor {
 
-    @Autowired(required = false)
+    @Autowired
     private UmsService umsService;
 
     /**
@@ -28,6 +25,7 @@ public class LoginInterceptor implements HandlerInterceptor {
      */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        System.out.println(request.getRequestURI());
         if(request.getRequestURI().contains("tologin")){
 //            如果要去登录页面，那就不拦截
             System.out.println(request.getRequestURI());

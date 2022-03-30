@@ -14,5 +14,19 @@ spring:
           filters:
             - RewritePath=/api/(?<segment>.*),/$\{segment}
 
+        - id: Img_router
+          uri: lb://start-ims
+          predicates:
+            - Path=/api/img/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+
+        - id: Video_router
+          uri: lb://start-vms
+          predicates:
+            - Path=/api/video/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+
   application:
     name: start-getway

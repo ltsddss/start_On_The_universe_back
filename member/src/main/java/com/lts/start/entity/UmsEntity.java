@@ -34,6 +34,15 @@ public class UmsEntity implements Serializable {
 	 */
 	private Date createtime;
 
+	public UmsEntity() {
+	}
+
+	public UmsEntity(String openid, String nickname, Date createtime) {
+		this.openid = openid;
+		this.nickname = nickname;
+		this.createtime = createtime;
+	}
+
 	public String getOpenid() {
 		return openid;
 	}

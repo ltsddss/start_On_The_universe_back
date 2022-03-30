@@ -28,8 +28,9 @@ import com.lts.start.service.UmsService;
  * @date 2022-03-22 18:03:00
  */
 @RestController
-@RequestMapping("start/ums")
+@RequestMapping("/start/ums")
 public class UmsController {
+
     @Autowired
     private UmsService umsService;
 

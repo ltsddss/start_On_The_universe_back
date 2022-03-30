@@ -1,9 +1,8 @@
-package com.lts.start.service;
+package com.lts.img.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.lts.start.entity.UmsEntity;
+import com.lts.img.entity.ConectionEntity;
 import com.lts.start.utils.PageUtils;
-import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
@@ -12,11 +11,11 @@ import java.util.Map;
  *
  * @author lts
  * @email 419253381@qq.com
- * @date 2022-03-22 18:03:00
+ * @date 2022-03-23 15:10:39
  */
-
-public interface UmsService extends IService<UmsEntity> {
+public interface ConectionService extends IService<ConectionEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
 }
 
