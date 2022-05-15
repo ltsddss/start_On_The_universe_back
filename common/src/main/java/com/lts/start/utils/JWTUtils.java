@@ -16,7 +16,7 @@ public class JWTUtils {
 
     /**
      *生成串
-     * @param account
+     * @param account 就是微信小程序发来的code
      * @return
      * @throws Exception
      */
@@ -44,5 +44,12 @@ public class JWTUtils {
                 .setSigningKey(secretKey)
                 .parseClaimsJws(jwt)
                 .getBody();
+    }
+
+    public static void main(String[] args) {
+//        测试，对123进行加密之后在进行解密
+        String token = JWTUtils.acquireJWT("用户账号","ob3ZA6ZUYHaC8I8kqNyeX1OLVW58");
+
+        System.out.println(token);
     }
 }

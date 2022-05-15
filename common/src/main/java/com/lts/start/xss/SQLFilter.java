@@ -41,7 +41,8 @@ public class SQLFilter {
         //判断是否包含非法字符
         for(String keyword : keywords){
             if(str.indexOf(keyword) != -1){
-                throw new RRException("包含非法字符");
+//                该字符串中包含非法字符时返回空串
+                return "";
             }
         }
 

@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 
@@ -15,6 +16,7 @@ import lombok.Data;
  * @date 2022-03-23 15:10:39
  */
 @TableName("conection")
+@Data
 public class ConectionEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -32,13 +34,16 @@ public class ConectionEntity implements Serializable {
 	 */
 	private Integer imgid;
 
+	private Integer vmid;
+
 	public ConectionEntity() {
 	}
 
-	public ConectionEntity(Integer id, String useropenid, Integer imgid) {
+	public ConectionEntity(Integer id, String useropenid, Integer imgid, Integer vmid) {
 		this.id = id;
 		this.useropenid = useropenid;
 		this.imgid = imgid;
+		this.vmid = vmid;
 	}
 
 	public Integer getId() {
@@ -63,5 +68,13 @@ public class ConectionEntity implements Serializable {
 
 	public void setImgid(Integer imgid) {
 		this.imgid = imgid;
+	}
+
+	public Integer getVmid() {
+		return vmid;
+	}
+
+	public void setVmid(Integer vmid) {
+		this.vmid = vmid;
 	}
 }

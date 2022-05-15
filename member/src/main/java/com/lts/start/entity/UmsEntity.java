@@ -34,13 +34,19 @@ public class UmsEntity implements Serializable {
 	 */
 	private Date createtime;
 
+	/**
+	 * 用户状态（是否启用）
+	 */
+	private Integer status;
+
 	public UmsEntity() {
 	}
 
-	public UmsEntity(String openid, String nickname, Date createtime) {
+	public UmsEntity(String openid, String nickname, Date createtime, Integer status) {
 		this.openid = openid;
 		this.nickname = nickname;
 		this.createtime = createtime;
+		this.status = status;
 	}
 
 	public String getOpenid() {
@@ -65,5 +71,13 @@ public class UmsEntity implements Serializable {
 
 	public void setCreatetime(Date createtime) {
 		this.createtime = createtime;
+	}
+
+	public Integer getStatus() {
+		return status;
+	}
+
+	public void setStatus(Integer status) {
+		this.status = status;
 	}
 }

@@ -68,6 +68,10 @@ public class ImsController {
         return R.ok().put("page",result);
     }
 
+    /**
+     * 收藏图片功能，很少用到（不写了）
+     */
+
 
     /**
      * 信息

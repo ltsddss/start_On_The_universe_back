@@ -16,6 +16,5 @@ import java.util.Map;
 public interface ImsService extends IService<ImsEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
-
 }
 

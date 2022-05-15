@@ -19,7 +19,7 @@ import java.util.stream.Stream;
 /**
  * 常量
  *
- * @author Mark sunlightcs@gmail.com
+ * @author lts 419253381@qq.com
  */
 public class Constant {
     /**

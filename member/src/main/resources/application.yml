@@ -7,6 +7,11 @@ spring:
     username: root
     password: 419253381
     url: jdbc:mysql://localhost:3306/start_ums?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 30000
   cloud:
     nacos:
       discovery:

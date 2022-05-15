@@ -8,6 +8,7 @@
         <result property="id" column="id"/>
         <result property="useropenid" column="userOpenID"/>
         <result property="imgid" column="imgID"/>
+        <result property="vmid" column="vmID"/>
     </resultMap>
 
 
